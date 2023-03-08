@@ -1,0 +1,15 @@
+.list__container{
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.list__container__name{
+    color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.greeting {
+    color: blueviolet;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

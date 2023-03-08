@@ -1,0 +1,16 @@
+.cart-widget{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: antiquewhite;
+    font-size: 30px;
+}
+
+span {
+    color: antiquewhite;
+    font-size: 20px;
+}
