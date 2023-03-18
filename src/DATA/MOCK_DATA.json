@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "BLUR",
+        "description": "PARKLIFE",
+        "price": 1500,
+        "img": "../imgs/vinilo.png",
+        "category": "Rock"
+
+    },
+    {
+        "id": 2,
+        "name": "THE STROKES",
+        "description": "THE NEW ABNORMAL",
+        "price": 2500,
+        "img": "../imgs/vinilo.png",
+        "category": "Rock"
+
+    },
+    {
+        "id": 3,
+        "name": "GORILLAZ",
+        "description": "CRACKER ISLAND",
+        "price": 3500,
+        "img": "../imgs/vinilo.png",
+        "category":"Indie"
+
+    },
+    {
+        "id": 4,
+        "name": "ARCTIC MONKEYS",
+        "description": "AM",
+        "price": 4500,
+        "img": "../imgs/vinilo.png",
+        "category": "Indie"
+
+    },
+    {
+        "id": 5,
+        "name": "RED HOT CHILLI PEPPERS",
+        "description": "BLOOD, SUGAR, SEX, MAGIC",
+        "price": 4700,
+        "img": "../imgs/vinilo.png",
+        "category": "Rock"
+
+    },
+    {
+        "id": 6,
+        "name": "ARIANA GRANDE",
+        "description": "SWEETENER",
+        "price": 5500,
+        "img": "../imgs/vinilo.png",
+        "category": "Pop"
+
+    },
+    {
+        "id": 7,
+        "name": "RIHANNA",
+        "description": "ANTI",
+        "price": 6700,
+        "img": "../imgs/vinilo.png",
+        "category": "Pop"
+
+    }
+]

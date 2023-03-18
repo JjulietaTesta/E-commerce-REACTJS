@@ -14,9 +14,9 @@ export const Navbar = () => {
 
 
                 <nav className="navbar">
-                    <p className="navbar__link">VINILOS</p>
-                    <p className="navbar__link">CD'S</p>
-                    <p className="navbar__link">CASSETES</p>
+                    <p className="navbar__link">POP</p>
+                    <p className="navbar__link">ROCK</p>
+                    <p className="navbar__link">INDIE</p>
                     <CartWidget/>
                 </nav>
                 
