@@ -5,7 +5,7 @@
         "description": "PARKLIFE",
         "price": 1500,
         "img": "../imgs/vinilo.png",
-        "category": "Rock"
+        "category": "rock"
 
     },
     {
@@ -14,7 +14,7 @@
         "description": "THE NEW ABNORMAL",
         "price": 2500,
         "img": "../imgs/vinilo.png",
-        "category": "Rock"
+        "category": "rock"
 
     },
     {
@@ -23,7 +23,7 @@
         "description": "CRACKER ISLAND",
         "price": 3500,
         "img": "../imgs/vinilo.png",
-        "category":"Indie"
+        "category":"indie"
 
     },
     {
@@ -32,7 +32,7 @@
         "description": "AM",
         "price": 4500,
         "img": "../imgs/vinilo.png",
-        "category": "Indie"
+        "category": "indie"
 
     },
     {
@@ -41,7 +41,7 @@
         "description": "BLOOD, SUGAR, SEX, MAGIC",
         "price": 4700,
         "img": "../imgs/vinilo.png",
-        "category": "Rock"
+        "category": "rock"
 
     },
     {
@@ -50,7 +50,7 @@
         "description": "SWEETENER",
         "price": 5500,
         "img": "../imgs/vinilo.png",
-        "category": "Pop"
+        "category": "pop"
 
     },
     {
@@ -59,7 +59,7 @@
         "description": "ANTI",
         "price": 6700,
         "img": "../imgs/vinilo.png",
-        "category": "Pop"
+        "category": "pop"
 
     }
 ]

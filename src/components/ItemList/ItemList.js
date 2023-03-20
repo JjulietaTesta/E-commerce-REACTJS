@@ -10,6 +10,7 @@ import './ItemList.css'
                   <hr/>
                   <img src={prod.img} alt={prod.name} className='item__img'/>
                   <p className='prod__name'>{prod.name}</p>
+                  <p>Categoría:{prod.category}</p>
                   <p>${prod.price}</p>
                   <button className="button">Ver más</button>
                   </div>)
