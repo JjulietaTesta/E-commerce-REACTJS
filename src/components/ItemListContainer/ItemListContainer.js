@@ -11,7 +11,7 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const categoryId = useParams()
+    const {categoryId} = useParams()
     console.log (categoryId)
 
     useEffect(() => {
@@ -41,7 +41,9 @@ export const ItemListContainer = () => {
     
         return (
         <div className="container my-5">
-            <h2 className="list__container__name"> Bienvenido a La Strokeria, tu tienda de vinilos</h2>
+            
+                <h2 className="list__container__name"> Bienvenido a La Strokeria, tu tienda de vinilos</h2>
+            
             <hr/>
             
             {
