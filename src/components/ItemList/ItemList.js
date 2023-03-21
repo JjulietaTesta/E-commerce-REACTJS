@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './ItemList.css'
 
 
@@ -6,16 +7,16 @@ import './ItemList.css'
         <div className="row main__container">
                 { productos.map((prod)=>
                   (<div key={prod.id} className="col-3 m-3 item__container">
-                  <p className='prod__description'>{prod.description}</p>
+                  <p className='prod__description'>{prod.name}</p>
                   <hr/>
                   <img src={prod.img} alt={prod.name} className='item__img'/>
-                  <p className='prod__name'>{prod.name}</p>
                   <p className='prod__text'>Categoría:{prod.category}</p>
                   <p className='prod__text'>${prod.price}</p>
-                  <button className="button">Ver más</button>
+                  <Link to={`/detail/${prod.id}`} className="button">Ver más</Link>
                   </div>)
                   )
                 }
           </div>
+                  
     )
 }

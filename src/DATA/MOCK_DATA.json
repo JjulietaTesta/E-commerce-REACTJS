@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "BLUR",
-        "description": "PARKLIFE",
+        "name": "PARKLIFE",
+        "description": "Parklife es el tercer álbum de la banda de rock británica Blur, lanzado en abril de 1994 por Food Records. Tras las malas ventas de su álbum anterior Modern Life Is Rubbish (1993), Parklife trajo de vuelta a Blur a la prominencia en el Reino Unido, gracias a sus cuatro exitosos sencillos: «Girls & Boys», «End of a Century», «Parklife» y «To the End».",
         "price": 1500,
         "img": "../imgs/vinilo.png",
         "category": "rock"
@@ -10,8 +10,8 @@
     },
     {
         "id": 2,
-        "name": "THE STROKES",
-        "description": "THE NEW ABNORMAL",
+        "name": "THE NEW ABNORMAL",
+        "description": "The New Abnormal es el sexto álbum de estudio de la banda de garage rock estadounidense The Strokes. Fue lanzado el 10 de abril de 2020 en todas las plataformas y países. Este álbum salió a la venta tras siete años sin un álbum de estudio, ya que Future Present Past es un EP publicado en 2016.",
         "price": 2500,
         "img": "../imgs/vinilo.png",
         "category": "rock"
@@ -19,8 +19,8 @@
     },
     {
         "id": 3,
-        "name": "GORILLAZ",
-        "description": "CRACKER ISLAND",
+        "name": "CRACKER ISLAND",
+        "description": "Cracker Island es el octavo álbum de estudio de la banda virtual británica Gorillaz, lanzado el 24 de febrero de 2023 por medio de Parlophone y Warner Records. El álbum incluye colaboraciones con artistas como Stevie Nicks, Adeleye Omotayo, Thundercat, Tame Impala, Bad Bunny, Bootie Brown y Beck.",
         "price": 3500,
         "img": "../imgs/vinilo.png",
         "category":"indie"
@@ -28,8 +28,8 @@
     },
     {
         "id": 4,
-        "name": "ARCTIC MONKEYS",
-        "description": "AM",
+        "name": "AM",
+        "description": "AM es el quinto álbum de estudio de la banda inglesa de Indie Rock, Arctic Monkeys. Fue lanzado el 9 de septiembre de 2013, bajo el sello Domino Records. El 15 de julio de 2013, revelaron la portada del álbum. El disco cuenta con las colaboraciones de Josh Homme, Bill Ryder-Jones y Pete Thomas. Fue producido por James Ford y coproducido por Ross Orton en los estudios Sage & Sound Recording en Los Ángeles y Rancho de la Luna en Joshua Tree, California",
         "price": 4500,
         "img": "../imgs/vinilo.png",
         "category": "indie"
@@ -37,8 +37,8 @@
     },
     {
         "id": 5,
-        "name": "RED HOT CHILLI PEPPERS",
-        "description": "BLOOD, SUGAR, SEX, MAGIC",
+        "name": "BLOOD, SUGAR, SEX, MAGIK",
+        "description": "Blood Sugar Sex Magik es el quinto álbum de estudio de la banda estadounidense de funk rock Red Hot Chili Peppers, lanzado el 24 de septiembre de 1991. Producido por Rick Rubin, fue la primera grabación de la banda lanzada por Warner Bros. Records.",
         "price": 4700,
         "img": "../imgs/vinilo.png",
         "category": "rock"
@@ -46,8 +46,8 @@
     },
     {
         "id": 6,
-        "name": "ARIANA GRANDE",
-        "description": "SWEETENER",
+        "name": "SWEETENER",
+        "description": "Sweetener es el cuarto trabajo discográfico de la cantante estadounidense Ariana Grande. Este está producido por la misma cantante. Trabajó en conjunto con el productor sueco Max Martin y los estadounidenses Pharrell Williams y Savan Kotecha, entre otros y cuenta con colaboraciones de Nicki Minaj, Pharrell y Missy Elliott.",
         "price": 5500,
         "img": "../imgs/vinilo.png",
         "category": "pop"
@@ -55,8 +55,8 @@
     },
     {
         "id": 7,
-        "name": "RIHANNA",
-        "description": "ANTI",
+        "name": "ANTI",
+        "description":"Anti es el octavo álbum de estudio de la cantante barbadense Rihanna, lanzado el 28 de enero de 2016 por Roc Nation y Westbury Road. Rihanna comenzó a grabar el álbum en 2014 después de finalizar su contrato con Def Jam Recordings, que había lanzado todos sus álbumes desde su debut en 2005.",
         "price": 6700,
         "img": "../imgs/vinilo.png",
         "category": "pop"

@@ -12,7 +12,7 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const {categoryId} = useParams()
-    console.log (categoryId)
+   
 
     useEffect(() => {
 
@@ -49,7 +49,7 @@ export const ItemListContainer = () => {
             {
                 loading 
                     ? <BasicExample />
-                    :<ItemList productos={productos}/>
+                    : <ItemList productos={productos}/>
             
             }
     </div>
