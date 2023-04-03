@@ -3,6 +3,9 @@
     align-items: center;
     gap: 4px;
     cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all, 0.3s;
 }
 
 .cart-icon {
@@ -13,4 +16,9 @@
 span {
     color: antiquewhite;
     font-size: 20px;
+}
+
+.cart-widget-active {
+    visibility: visible; 
+    opacity: 1; 
 }

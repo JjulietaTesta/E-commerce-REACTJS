@@ -24,6 +24,10 @@ export const CartProvider = ({children}) => {
     return cart.reduce((acc,prod) => acc + prod.cantidad, 0)
   }
 
+  const totalCompra = () => {
+    return cart.reduce((acc,prod) => acc + prod.cantidad * prod.price, 0)
+  }
+
   const vaciarCarrito = () => {
     setCart ([])
   }
@@ -36,7 +40,8 @@ export const CartProvider = ({children}) => {
             isInCart,
             totalCarrito,
             vaciarCarrito,
-            quitarDeCarrito
+            quitarDeCarrito,
+            totalCompra
           }}>
             {children}
 

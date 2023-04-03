@@ -1,16 +1,16 @@
 import Spinner from 'react-bootstrap/Spinner';
+import './Spinner.css'
 
 
 
  function BasicExample() {
    return (
      <div className='spinner'>
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-       </Spinner>
+        <Spinner animation="border" role="status"/>
      </div>
    );
- }
+}
+    
  
  
  

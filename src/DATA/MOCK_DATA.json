@@ -6,7 +6,7 @@
         "price": 1500,
         "img": "../imgs/vinilo.png",
         "category": "rock",
-        "stock": 6
+        "stock": 0
 
     },
     {

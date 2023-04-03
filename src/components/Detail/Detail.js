@@ -28,15 +28,16 @@ const Detail = ({item}) =>{
             <p> {item.description}</p>
 
             
-            { 
-                isInCart(item.id)
-                ? <Link to="/cart" className='btn btn-success'> Finalizar compra </Link>
-                : <ItemCount 
-                max={item.stock}
-                cantidad={cantidad}
-                setCantidad={setCantidad}
-                agregar={handleAgregar}
-                />
+            {   item.stock === 0
+                ? <h3>No hay stock de este producto <Link to='/' className='btn btn-primary'> Volver </Link></h3> 
+                : isInCart(item.id)
+                    ? <Link to="/cart" className='btn btn-success'> Finalizar compra </Link>
+                    : <ItemCount 
+                    max={item.stock}
+                    cantidad={cantidad}
+                    setCantidad={setCantidad}
+                    agregar={handleAgregar}
+                    />
 
             }
             

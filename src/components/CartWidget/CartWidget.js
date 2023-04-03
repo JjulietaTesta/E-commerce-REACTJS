@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 
 
 export const CartWidget = () => {
-    const { totalCarrito } = useContext(CartContext)
+    const { totalCarrito, cart } = useContext(CartContext)
     
     return (
-        <Link to="/cart" className="cart-widget">
+        <Link to="/cart" className= {`cart-widget ${cart.length > 0 ? 'cart-widget-active' : ''}`}>
             <AiOutlineShoppingCart className="cart-icon"/>
             <span>{totalCarrito()}</span>
         </Link>
