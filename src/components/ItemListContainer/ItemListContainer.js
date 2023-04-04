@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../helpers/pedirDatos"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import BasicExample from "../Spinner/Spinner"
 import "./ItemListContainer.css"
+import { collection, doc, getDocs } from "firebase/firestore"
+import { db } from "../Firebase/Config"
 
 
 export const ItemListContainer = () => {
@@ -18,23 +19,19 @@ export const ItemListContainer = () => {
 
         setLoading(true)
         
-        pedirDatos()
-         .then ((res)=>{
-            if (categoryId){
-            setProductos (res.filter((prod)=> prod.category === categoryId))
-            } else {
-                setProductos(res)
-            }
-        })
-        
-         .catch ((err)=>{
-           console.log (err)
-        })
+        const productosRef = collection(db, "productos")
 
-         
-         .finally(()=>{
-           setLoading(false)
+        getDocs (productosRef)
+         .then((res)=>{
+            setProductos(res.docs.map((doc)=> {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            }))
          })
+         .finally(()=> setLoading(false))
+        
           
     },[categoryId]) 
     
