@@ -3,7 +3,7 @@ import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import BasicExample from "../Spinner/Spinner"
 import "./ItemListContainer.css"
-import { collection, doc, getDocs } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../Firebase/Config"
 
 
@@ -20,8 +20,11 @@ export const ItemListContainer = () => {
         setLoading(true)
         
         const productosRef = collection(db, "productos")
+        const q = categoryId 
+                    ? query(productosRef, where("category", "==", categoryId))
+                    : productosRef
 
-        getDocs (productosRef)
+        getDocs (q)
          .then((res)=>{
             setProductos(res.docs.map((doc)=> {
                 return {
