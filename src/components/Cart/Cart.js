@@ -44,6 +44,7 @@ export const Cart = () => {
             <h4> TOTAL: {totalCompra()} </h4>
 
             <button onClick={vaciarCarrito} className="btn btn-danger m-2"> Vaciar Carrito </button>
+            <Link to="/checkout" className="btn btn-success m-2"> Finalizar compra </Link>
 
         </div>
     )
