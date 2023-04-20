@@ -1,8 +1,24 @@
-import { useContext, useState } from "react"
+import { useContext, useState} from "react"
 import { CartContext } from "../Context/CartContext"
 import { Navigate } from "react-router-dom"
 import { collection, addDoc } from "firebase/firestore"
 import { db } from "../Firebase/Config"
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+
+const validation = Yup.object().shape({
+    nombre: Yup.string()
+               .required("Este dato es requerido")
+               .min(6, "Mínimo 6 caracteres")
+               .max(20, "Máximo 20 carateres"),
+    direccion: Yup.string()
+               .required("Este dato es requerido")
+               .min(6, "Mínimo 6 caracteres")
+               .max(20, "Máximo 20 carateres"),
+    email: Yup.string()
+               .email("El email no es válido") 
+               .required("Este dato es requerido")
+})
 
  export const Checkout = () => {
 
@@ -10,29 +26,11 @@ import { db } from "../Firebase/Config"
 
     const [orderId, setOrderId] = useState(null)
     
-    const [values, setValues] = useState ({
-        nombre: '',
-        direccion: '',
-        email: ''
-    })
+    
 
-    const handleSubmit = (e)=> {
-        e.preventDefault()
-
-        if (values.nombre.length < 6) {
-            alert ("Minimo 6 caracteres")
-            return
-        }
-
-        if (values.direccion.length < 6) {
-            alert ("Minimo 6 caracteres")
-            return
-        }
-        if (values.email.length < 8) {
-            alert ("Minimo 8 caracteres")
-            return
-        }
-
+    const crearOrden = (values)=> {
+        
+        
         const orden = {
             cliente: values,
             items: cart,
@@ -62,57 +60,60 @@ import { db } from "../Firebase/Config"
             return <Navigate to= "/" />
         }
         
-        
-    
-
-    const handleInputChange = (e) =>{
-     
-        setValues ({
-            ...values,
-            [e.target.name] : e.target.value
-        })
-    }
-
-   
+       
     return(
         <div className="container my-5">
             <h2>Ingresá tus datos</h2>
             <hr/>
 
-            <form onSubmit={handleSubmit}>
-                <input
-                    value={values.nombre}
-                    type='text'
-                    className="form-control my-2"
-                    placeholder="Ingresa tu nombre"
-                    onChange={handleInputChange}
-                    name="nombre"
-                   
+            <Formik
+                validationSchema={validation}
+                initialValues={{
+                nombre: '',
+                direccion: '',
+                email: ''}} 
+                onSubmit={crearOrden}          
+            >
 
-                />
-                 <input
-                    value={values.direccion}
-                    type='text'
-                    className="form-control my-2"
-                    placeholder="Ingresa tu dirección"
-                    onChange={handleInputChange}
-                    name="direccion"
-                />
-                 <input
-                    value={values.email}
-                    type='email'
-                    className="form-control my-2"
-                    placeholder="Ingresa tu e-mail"
-                    onChange={handleInputChange}
-                    name="email"
-                />
+                {
+                    ({values, errors, handleChange, handleSubmit})=> (
+                        <form onSubmit={handleSubmit}>
+                            <input
+                            value={values.nombre}
+                            type='text'
+                            className="form-control my-2"
+                            placeholder="Ingresa tu nombre"
+                            onChange={handleChange}
+                            name="nombre"
+                      
+                        />
+                        {errors.nombre && <p style={{color: 'red' }}>{errors.nombre}</p>}
+                            <input
+                            value={values.direccion}
+                            type='text'
+                            className="form-control my-2"
+                            placeholder="Ingresa tu dirección"
+                            onChange={handleChange}
+                            name="direccion"
+                        />
+                        {errors.direccion && <p style={{color: 'red' }}>{errors.direccion}</p>}
+                            <input
+                            value={values.email}
+                            type='email'
+                            className="form-control my-2"
+                            placeholder="Ingresa tu e-mail"
+                            onChange={handleChange}
+                            name="email"
+                        />
+                        {errors.email && <p style={{color: 'red' }}>{errors.email}</p>}
+        
+                        <button className="btn btn-success" type="submit"> Enviar </button>
+                    </form>
+          
+                    )
+                }
 
-                <button className="btn btn-success" type="submit"> Enviar </button>
-            </form>
-
-
-
-            
+            </Formik>
 
         </div>
     )
