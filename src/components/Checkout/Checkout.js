@@ -5,6 +5,7 @@ import { collection, addDoc } from "firebase/firestore"
 import { db } from "../Firebase/Config"
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import './Checkout.css'
 
 const validation = Yup.object().shape({
     nombre: Yup.string()
@@ -62,8 +63,8 @@ const validation = Yup.object().shape({
         
        
     return(
-        <div className="container my-5">
-            <h2>Ingresá tus datos</h2>
+        <div className="container my-5 form-container">
+            <h2 className="form-title">Ingresá tus datos</h2>
             <hr/>
 
             <Formik
@@ -107,7 +108,7 @@ const validation = Yup.object().shape({
                         />
                         {errors.email && <p style={{color: 'red' }}>{errors.email}</p>}
         
-                        <button className="btn btn-success" type="submit"> Enviar </button>
+                        <button className="btn btn-success form-btn" type="submit"> Enviar </button>
                     </form>
           
                     )
