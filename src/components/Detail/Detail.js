@@ -22,16 +22,16 @@ const Detail = ({item}) =>{
 
     return (
         <div>
-            <h2>{item.name} </h2>
+            <h2 className='detail__name'>{item.name} </h2>
             <hr/>
             <img className="detail__img" src={item.img} alt={item.name}/>
-            <p> {item.description}</p>
+            <p className='detail__description'> {item.description}</p>
 
             
             {   item.stock === 0
-                ? <h3>No hay stock de este producto <Link to='/' className='btn btn-primary'> Volver </Link></h3> 
+                ? <h3>No hay stock de este producto <Link to='/' className='btn-detail'> Volver </Link></h3> 
                 : isInCart(item.id)
-                    ? <Link to="/cart" className='btn btn-success'> Finalizar compra </Link>
+                    ? <Link to="/cart" className='btn-detail'> Finalizar compra </Link>
                     : <ItemCount 
                     max={item.stock}
                     cantidad={cantidad}

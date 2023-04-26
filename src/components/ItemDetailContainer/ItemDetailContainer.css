@@ -1,0 +1,11 @@
+.detail-container {
+    width: 30%;
+    height: 50%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(233, 219, 233);
+    border-radius: 10px;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+}

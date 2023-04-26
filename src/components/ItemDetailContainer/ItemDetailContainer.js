@@ -4,6 +4,7 @@ import BasicExample from "../Spinner/Spinner"
 import Detail from "../Detail/Detail"
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../Firebase/Config"
+import './ItemDetailContainer.css'
 
 
 
@@ -37,7 +38,7 @@ const ItemDetailContainer = ()=> {
     },[])   
 
         return (
-            <div className="container my-5">
+            <div className="detail-container">
                 {
                     loading
                     ? <BasicExample />

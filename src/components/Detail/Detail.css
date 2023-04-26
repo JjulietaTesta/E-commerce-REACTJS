@@ -1,4 +1,25 @@
 .detail__img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+.btn-detail {
+    background-color: rgb(155, 114, 187);
+    color: black;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border-color: blueviolet;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.detail__description {
+    font-size: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.detail__name {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
 }

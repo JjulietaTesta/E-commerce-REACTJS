@@ -8,12 +8,13 @@ import { Cart } from './components/Cart/Cart';
 import { Checkout } from './components/Checkout/Checkout'
 
 
+
 function App() {
  
   
   
   return (
-
+    
     <CartProvider>
 
       <BrowserRouter>
@@ -29,6 +30,7 @@ function App() {
       </BrowserRouter>
       
     </CartProvider>
+    
     
     );
     
