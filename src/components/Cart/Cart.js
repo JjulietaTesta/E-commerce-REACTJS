@@ -13,11 +13,12 @@ export const Cart = () => {
     
     if (cart.length === 0) {
         return (
-            <div className="container my-5">
+            <div className="noproducts-container">
                 <h2> No hay productos para mostrar</h2>
-                <hr/>
-                <Link to='/' className="btn btn-primary"> Volver </Link>
 
+                <div className="btn-cart">
+                <Link to='/' className="btn-back"> Volver </Link>
+                </div>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import { useContext, useState} from "react"
 import { CartContext } from "../Context/CartContext"
-import { Navigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import { collection, addDoc } from "firebase/firestore"
 import { db } from "../Firebase/Config"
 import { Formik } from 'formik';
@@ -49,10 +49,14 @@ const validation = Yup.object().shape({
 
         if (orderId) {
             return (
-                <div className="container my-5">
+                <div className="checkout-container">
                     <h2>Tu compra se realizó correctamente</h2>
                     <hr/> 
-                    <p>Guarda tu id de orden: {orderId}</p>
+                    <p>Guarda tu id de orden: <strong> {orderId}</strong> </p>
+
+                    <div className="div-btn">
+                    <Link to='/' className="btn-checkout"> Volver </Link>
+                    </div>
                 </div>
         )
     }
@@ -108,7 +112,7 @@ const validation = Yup.object().shape({
                         />
                         {errors.email && <p style={{color: 'red' }}>{errors.email}</p>}
         
-                        <button className="btn btn-success form-btn" type="submit"> Enviar </button>
+                        <button className="form-btn" type="submit"> Enviar </button>
                     </form>
           
                     )
